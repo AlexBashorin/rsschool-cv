@@ -1,7 +1,7 @@
 # Alexandr Bashorin
 
 ### Contacts
-* *Phone:* +7 996 218-60-87
+* *Phone:* +7 (996) 218-60-87
 * *Email:* bashorina5@gmail.com
 * *Telegram:* @Alex_bash
 
