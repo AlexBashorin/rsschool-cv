@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <div class="photo"><img src="https://i.postimg.cc/HL5snqXn/iam.jpg" alt="image"></div>
+        <h1>Alexandr Bashorin</h1>
+        <section>
+            <h2>Contacts</h2>
+            <ul>
+                <li><strong>phone</strong>: +7 (996) 218-60-87</li>
+                <li><strong>email</strong>: bashorina5@gmail.com</li>
+                <li><strong>telegram</strong>: <a href="https://t.me/Alex_bash">@Alex_bash</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Summary</h2>
+            <p class='paragraph'>My main goal is to get a position as a front-end developer. 
+                 Before taking part in this training, I worked as a graphic designer. 
+                 In the spring, I started learning Figma, and also started learning JavaScript 
+                 from a <a href="https://learn.javascript.ru/">tutorial</a>.</p> 
+        </section>
+        <section>
+            <h2>Skills</h2>
+            <p class='paragraph'>Basic knowledge of HTML, CSS, JavaScript.</p>
+        </section>
+        <section>
+            <h2>Latest code example</h2>
+            <p class='paragraph'>From an online lesson from <a href="https://tproger.ru/">Troger</a>:</p>
+            <details>
+                <summary class="openButton">Click here</summary>
+
+                <div class="code">
+
+                    <pre class="highlight"><code>
+                        const catIcon = L.icon({iconUrl: 'img/catIcon.png', iconSize:[38, 38], iconAnchor: [19, 38]});
+                        const mymap = L.map('map');
+                        const marker = L.marker([0, 0], {icon: catIcon}).addTo(mymap);
+                        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(mymap);
+                        function weather () {
+                         navigator.geolocation.getCurrentPosition(async (event) => {
+                           mymap.setView([event.coords.latitude, event.coords.longitude], 13);
+                           marker.setLatLng([event.coords.latitude, event.coords.longitude]).update();
+                           const url = "http://api.weatherstack.com/current?access_key=efd350a8ef4ecf4affd3c61c0ad9dea3&query=";
+                           try {
+                             const response = await fetch(url + event.coords.latitude + ',' + event.coords.longitude);
+                             if (response.ok){
+                               const json = await response.json(),
+                                 weather = json.current.weather_icons[0],
+                                 degrees = json.current.temperature,
+                                 time = json.current.observation_time,
+                                 humidity = json.current.humidity;
+                               document.getElementById("weather").src = weather;
+                               document.getElementById("degrees").innerText = degrees;
+                               document.getElementById("time").innerText = time;
+                               document.getElementById("humidity").innerText = humidity;
+                             }
+                           } catch (e) {
+                             alert("Не удалось получить данные о погоде");
+                           }
+                         }, () => {
+                           alert("Не удалось получить текущую позицию. Возможно стоит проверить настройки геолокации")
+                         }, {enableHighAccuracy: true});
+                        }
+                        weather();
+                        setInterval(weather, 60*1000);                   
+      </code></pre>
+
+                </div>
+            </details>
+        </section>
+        <section>
+            <h2>Experience</h2>
+            <ul>
+                <li class='paragraph'>RS school</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Education</h2>
+            <ul>
+                <li>Udmurt state university(2017);</li>
+            </ul>
+        </section>
+        <section>
+            <h2>English</h2>
+            <p>Pre-intermediate</p>
+        </section>
+    </main>
+</body>
+
+</html>
