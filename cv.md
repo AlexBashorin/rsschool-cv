@@ -3,7 +3,7 @@
 ### Contacts
 * *Phone:* +7 (996) 218-60-87
 * *Email:* bashorina5@gmail.com
-* *Telegram:* [@Alex_bash]{@Alex_bash}
+* *Telegram:* [@Alex_bash](@Alex_bash)
 
 ### Summary
 My main goal is to get a position as a front-end developer. Before taking part in this training, I worked as a graphic designer. In the spring, I started learning Figma, and also started learning JavaScript from a tutorial: https://learn.javascript.ru/.
